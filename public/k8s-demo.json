@@ -1,145 +1,145 @@
 {
-    "timestamp": "NEVER.  It's a demo.",
+    "timestamp": "NEVER. It's a demo.",
     "nodes": [
         {
-            "name": "John-Kitchenaid",
+            "name": "node-1-worker",
             "cpuUsage": "0.80",
             "memoryUsage": "0.24"
         },
         {
-            "name": "Sarah-HamiltonBeach",
+            "name": "node-2-worker",
             "cpuUsage": "0.30",
             "memoryUsage": "0.45"
         },
         {
-            "name": "Dave-Breville",
+            "name": "node-3-worker",
             "cpuUsage": "0.60",
             "memoryUsage": "0.65"
         },
         {
-            "name": "Alice-Cuisinart",
+            "name": "node-4-worker",
             "cpuUsage": "4040404",
             "memoryUsage": "0.99"
         }
     ],
     "pods": [
         {
-            "namespace": "Pumpernickel",
-            "name": "Hannah",
+            "namespace": "default",
+            "name": "web-app-5f9d7f7b9c-4lmdx",
             "cpuUsage": "3",
             "memoryUsage": "114"
         },
         {
-            "namespace": "Rye",
-            "name": "Emma",
+            "namespace": "kube-system",
+            "name": "coredns-5644d7b6d9-nj7q2",
             "cpuUsage": "27",
             "memoryUsage": "529"
         },
         {
-            "namespace": "Focaccia",
-            "name": "Oliver",
+            "namespace": "monitoring",
+            "name": "prometheus-server-7c57c886fc-tg9k8",
             "cpuUsage": "4040404",
             "memoryUsage": "820"
         },
         {
-            "namespace": "Multigrain",
-            "name": "Sophia",
+            "namespace": "production",
+            "name": "api-service-68cfc65d5f-x2pgl",
             "cpuUsage": "12",
             "memoryUsage": "221"
         },
         {
-            "namespace": "Ciabatta",
-            "name": "Jack",
+            "namespace": "staging",
+            "name": "db-migrator-56d45d9f7-tt4fg",
             "cpuUsage": "22",
             "memoryUsage": "678"
         },
         {
-            "namespace": "Sourdough",
-            "name": "Amelia",
+            "namespace": "logging",
+            "name": "elasticsearch-7bbccbf44-kmlsd",
             "cpuUsage": "5",
             "memoryUsage": "446"
         },
         {
-            "namespace": "Rye",
-            "name": "Charlie",
+            "namespace": "kube-system",
+            "name": "kube-proxy-v2r2b",
             "cpuUsage": "19",
             "memoryUsage": "131"
         },
         {
-            "namespace": "Pita",
-            "name": "Lucas",
+            "namespace": "development",
+            "name": "frontend-7b59d49b6b-hj4tc",
             "cpuUsage": "34",
             "memoryUsage": "254"
         },
         {
-            "namespace": "Baguette",
-            "name": "Ava",
+            "namespace": "backup",
+            "name": "velero-85f5d6888c-x4k6d",
             "cpuUsage": "4040404",
             "memoryUsage": "600"
         },
         {
-            "namespace": "Challah",
-            "name": "Noah",
+            "namespace": "default",
+            "name": "nginx-7b8b98d6cf-8slrd",
             "cpuUsage": "8",
             "memoryUsage": "87"
         },
         {
-            "namespace": "Sourdough",
-            "name": "Isabella",
+            "namespace": "logging",
+            "name": "fluentd-5d86d5d9b7-pq7z9",
             "cpuUsage": "6",
             "memoryUsage": "123"
         },
         {
-            "namespace": "Rye",
-            "name": "James",
+            "namespace": "kube-system",
+            "name": "calico-node-5f9d7",
             "cpuUsage": "4040404",
             "memoryUsage": "732"
         },
         {
-            "namespace": "WholeGrain",
-            "name": "Grace",
+            "namespace": "production",
+            "name": "payment-service-7c7f6d57fd-dm9r8",
             "cpuUsage": "74",
             "memoryUsage": "841"
         },
         {
-            "namespace": "Brioche",
-            "name": "Liam",
+            "namespace": "default",
+            "name": "redis-596d9f7c9c-nd3sb",
             "cpuUsage": "60",
             "memoryUsage": "391"
         },
         {
-            "namespace": "Naan",
-            "name": "Chloe",
+            "namespace": "monitoring",
+            "name": "grafana-556f5f799c-wd2b9",
             "cpuUsage": "83",
             "memoryUsage": "713"
         },
         {
-            "namespace": "Cornbread",
-            "name": "Benjamin",
+            "namespace": "backup",
+            "name": "restic-w7b4f5",
             "cpuUsage": "22",
             "memoryUsage": "119"
         },
         {
-            "namespace": "Wheat",
-            "name": "Mia",
+            "namespace": "default",
+            "name": "postgres-7b8f87d9d4-ml8kc",
             "cpuUsage": "9",
             "memoryUsage": "531"
         },
         {
-            "namespace": "Pumpernickel",
-            "name": "Ethan",
+            "namespace": "staging",
+            "name": "cache-redis-69dd7c8d5d-wn9j5",
             "cpuUsage": "4040404",
             "memoryUsage": "275"
         },
         {
-            "namespace": "Focaccia",
-            "name": "Aiden",
+            "namespace": "production",
+            "name": "order-service-67dd9bffd5-nf4p6",
             "cpuUsage": "90",
             "memoryUsage": "980"
         },
         {
-            "namespace": "SodaBread",
-            "name": "Ella",
+            "namespace": "default",
+            "name": "sidekiq-789dff47d7-4kd6c",
             "cpuUsage": "4",
             "memoryUsage": "149"
         }
