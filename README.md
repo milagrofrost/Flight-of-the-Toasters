@@ -1,5 +1,7 @@
 # ✈️🥖 **Flight of the Toasters** 🥳🎉
 
+![The "smaller" version](image.png)
+
 This started out as a "simple" project to create a fun way to display the health of my homelab server. 🏡💻 I ended up spending so much time on the looks of it that I decided to make a generic version. 🎨✨ One that didn't rely on inputs from a server and could be used by anyone. 🙌 So here we are. The flying toasters are back! 🚀🍞
 
 Here's the demos 
