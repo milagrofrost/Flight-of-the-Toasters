@@ -67,6 +67,7 @@ Here's the demos (Don't forget to click UnMute on the page! 🔊):
   - https://github.com/milagrofrost/Flying-K8s
 - But it doesn't have to be just K8s metrics. 🤯 
   - As long as you follow the same json schema as seen in [public/local-fallback.json](public/local-fallback.json) and adjust the values in [public/configs/default.json](public/configs/default.json) to what makes sense for what your metric values, the sky's the limit!
+- Promo : https://flyingk8s.milagrofrost.com/flyingk8s.mp3
 
 ## 🆘 **Need help with** 🆘
 
