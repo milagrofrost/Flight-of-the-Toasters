@@ -1,0 +1,44 @@
+name: Build and Upload to Cloudflare R2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the React app
+      run: npm run build
+
+    - name: Set up AWS CLI for Cloudflare R2
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        AWS_DEFAULT_REGION: auto
+      run: |
+        # Set the default bucket name
+        BUCKET_NAME="frostbit-flying-k8s"
+
+        # Upload each file in the build directory to the R2 bucket, preserving folder structure
+        find build -type f | while read file; do
+          aws s3api put-object \
+            --bucket "$BUCKET_NAME" \
+            --key "${file#build/}" \
+            --body "$file" \
+            --endpoint-url "https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com"
+        done

@@ -1,0 +1,20 @@
+{
+  "updateInterval": 30000,
+  "staggerInterval": 200,
+  "durationMin": 5000,
+  "durationMax": 15000,
+  "minSizeToaster": 100,
+  "maxSizeToaster": 500,
+  "minSizeToast": 50,
+  "maxSizeToast": 300,
+  "maxMemoryToast": 1500,
+  "maxCpuToast": 120,
+  "zoomiesFreq": 5,
+  "copsFreq": 3,
+  "copsAndRobbers": true,
+  "butterChance": 1,
+  "butterMaxSlices": 15,
+  "copSoundChance": 3,
+  "totalPoliceSounds": 20,
+  "excludeNamespaces": []
+}

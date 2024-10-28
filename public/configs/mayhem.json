@@ -1,0 +1,20 @@
+{
+  "updateInterval": 10000,
+  "staggerInterval": 100,
+  "durationMin": 3000,
+  "durationMax": 8000,
+  "minSizeToaster": 150,
+  "maxSizeToaster": 550,
+  "minSizeToast": 100,
+  "maxSizeToast": 350,
+  "maxMemoryToast": 2000,
+  "maxCpuToast": 150,
+  "zoomiesFreq": 3,
+  "copsFreq": 2,
+  "copsAndRobbers": true,
+  "butterChance": 1,
+  "butterMaxSlices": 20,
+  "copSoundChance": 2,
+  "totalPoliceSounds": 25,
+  "excludeNamespaces": ["kube-system"]
+}

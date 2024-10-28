@@ -1,0 +1,23 @@
+{
+    "showLabels": true,
+    "showStatus": true,
+    "remoteDataUrl": "https://flyingk8s.milagrofrost.com/flyingk8s.json",
+    "updateInterval": 60000,
+    "staggerInterval": 500,
+    "durationMin": 15000,
+    "durationMax": 20000,
+    "minSizeToaster": 200,
+    "maxSizeToaster": 600,
+    "minSizeToast": 100,
+    "maxSizeToast": 400,
+    "maxMemoryToast": 1000,
+    "maxCpuToast": 100,
+    "zoomiesFreq": 10,
+    "copsFreq": 5,
+    "copsAndRobbers": true,
+    "butterChance": 5,
+    "butterMaxSlices": 10,
+    "copSoundChance": 5,
+    "totalPoliceSounds": 14,
+    "excludeNamespaces": ["argocd"]
+}

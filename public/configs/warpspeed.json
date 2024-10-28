@@ -1,0 +1,23 @@
+{
+    "showLabels": false,
+    "showStatus": true,
+    "remoteDataUrl": "jomama",
+    "updateInterval": 60000,
+    "staggerInterval": 500,
+    "durationMin": 1000,
+    "durationMax": 3000,
+    "minSizeToaster": 100,
+    "maxSizeToaster": 300,
+    "minSizeToast": 100,
+    "maxSizeToast": 200,
+    "maxMemoryToast": 1000,
+    "maxCpuToast": 100,
+    "zoomiesFreq": 10,
+    "copsFreq": 5,
+    "copsAndRobbers": true,
+    "butterChance": 5,
+    "butterMaxSlices": 10,
+    "copSoundChance": 5,
+    "totalPoliceSounds": 14,
+    "excludeNamespaces": ["argocd"]
+}

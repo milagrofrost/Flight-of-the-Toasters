@@ -1,0 +1,20 @@
+{
+  "updateInterval": 60000,
+  "staggerInterval": 500,
+  "durationMin": 12000,
+  "durationMax": 18000,
+  "minSizeToaster": 300,
+  "maxSizeToaster": 600,
+  "minSizeToast": 200,
+  "maxSizeToast": 400,
+  "maxMemoryToast": 1000,
+  "maxCpuToast": 100,
+  "zoomiesFreq": 20,
+  "copsFreq": 10,
+  "copsAndRobbers": true,
+  "butterChance": 10,
+  "butterMaxSlices": 2,
+  "copSoundChance": 8,
+  "totalPoliceSounds": 14,
+  "excludeNamespaces": ["default", "argocd"]
+}
