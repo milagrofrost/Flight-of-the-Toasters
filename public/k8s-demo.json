@@ -1,0 +1,147 @@
+{
+    "timestamp": "NEVER.  It's a demo.",
+    "nodes": [
+        {
+            "name": "John-Kitchenaid",
+            "cpuUsage": "0.80",
+            "memoryUsage": "0.24"
+        },
+        {
+            "name": "Sarah-HamiltonBeach",
+            "cpuUsage": "0.30",
+            "memoryUsage": "0.45"
+        },
+        {
+            "name": "Dave-Breville",
+            "cpuUsage": "0.60",
+            "memoryUsage": "0.65"
+        },
+        {
+            "name": "Alice-Cuisinart",
+            "cpuUsage": "4040404",
+            "memoryUsage": "0.99"
+        }
+    ],
+    "pods": [
+        {
+            "namespace": "Pumpernickel",
+            "name": "Hannah",
+            "cpuUsage": "3",
+            "memoryUsage": "114"
+        },
+        {
+            "namespace": "Rye",
+            "name": "Emma",
+            "cpuUsage": "27",
+            "memoryUsage": "529"
+        },
+        {
+            "namespace": "Focaccia",
+            "name": "Oliver",
+            "cpuUsage": "4040404",
+            "memoryUsage": "820"
+        },
+        {
+            "namespace": "Multigrain",
+            "name": "Sophia",
+            "cpuUsage": "12",
+            "memoryUsage": "221"
+        },
+        {
+            "namespace": "Ciabatta",
+            "name": "Jack",
+            "cpuUsage": "22",
+            "memoryUsage": "678"
+        },
+        {
+            "namespace": "Sourdough",
+            "name": "Amelia",
+            "cpuUsage": "5",
+            "memoryUsage": "446"
+        },
+        {
+            "namespace": "Rye",
+            "name": "Charlie",
+            "cpuUsage": "19",
+            "memoryUsage": "131"
+        },
+        {
+            "namespace": "Pita",
+            "name": "Lucas",
+            "cpuUsage": "34",
+            "memoryUsage": "254"
+        },
+        {
+            "namespace": "Baguette",
+            "name": "Ava",
+            "cpuUsage": "4040404",
+            "memoryUsage": "600"
+        },
+        {
+            "namespace": "Challah",
+            "name": "Noah",
+            "cpuUsage": "8",
+            "memoryUsage": "87"
+        },
+        {
+            "namespace": "Sourdough",
+            "name": "Isabella",
+            "cpuUsage": "6",
+            "memoryUsage": "123"
+        },
+        {
+            "namespace": "Rye",
+            "name": "James",
+            "cpuUsage": "4040404",
+            "memoryUsage": "732"
+        },
+        {
+            "namespace": "WholeGrain",
+            "name": "Grace",
+            "cpuUsage": "74",
+            "memoryUsage": "841"
+        },
+        {
+            "namespace": "Brioche",
+            "name": "Liam",
+            "cpuUsage": "60",
+            "memoryUsage": "391"
+        },
+        {
+            "namespace": "Naan",
+            "name": "Chloe",
+            "cpuUsage": "83",
+            "memoryUsage": "713"
+        },
+        {
+            "namespace": "Cornbread",
+            "name": "Benjamin",
+            "cpuUsage": "22",
+            "memoryUsage": "119"
+        },
+        {
+            "namespace": "Wheat",
+            "name": "Mia",
+            "cpuUsage": "9",
+            "memoryUsage": "531"
+        },
+        {
+            "namespace": "Pumpernickel",
+            "name": "Ethan",
+            "cpuUsage": "4040404",
+            "memoryUsage": "275"
+        },
+        {
+            "namespace": "Focaccia",
+            "name": "Aiden",
+            "cpuUsage": "90",
+            "memoryUsage": "980"
+        },
+        {
+            "namespace": "SodaBread",
+            "name": "Ella",
+            "cpuUsage": "4",
+            "memoryUsage": "149"
+        }
+    ]
+}
