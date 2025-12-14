@@ -13,7 +13,7 @@ Here's the demos (Don't forget to click UnMute on the page! 🔊):
   - These guys need to tone down their caffeine intake. ☕🍞🕊️
 - https://flyingk8s.milagrofrost.com/?configFile=policestate
   - If every one is a cop, then no one is a cop. 🚓🍞🕊️
-- http://localhost:3000/?configFile=christmas
+- http://flyingk8s.milagrofrost.com/?configFile=christmas
   - Christmas mode with snowfall, festive gifs, no labels, and no police sounds! ❄️🎄
 
 
