@@ -13,6 +13,8 @@ Here's the demos (Don't forget to click UnMute on the page! 🔊):
   - These guys need to tone down their caffeine intake. ☕🍞🕊️
 - https://flyingk8s.milagrofrost.com/?configFile=policestate
   - If every one is a cop, then no one is a cop. 🚓🍞🕊️
+- http://localhost:3000/?configFile=christmas
+  - Christmas mode with snowfall, festive gifs, no labels, and no police sounds! ❄️🎄
 
 
 ## ✨ **Features** ✨
@@ -42,6 +44,8 @@ Here's the demos (Don't forget to click UnMute on the page! 🔊):
 - 🌐 **Toasters are generated based on values from a remote data source or using the fallback data source `local-fallback.json`.**
 - 🥳 **The first few toasts will not have any butter on them or be police.**
   - It just does that. It's a feature. 😏 We're in the features section BTW.
+- ❄️ **Christmas mode**
+  - Snowfall effect, festive gifs for toasters and toasts, Santa appears larger and less frequently, no labels or police sounds. 🎄❄️
 
 ## 🎮 **Select Modes** 🎮
 
@@ -50,6 +54,7 @@ Here's the demos (Don't forget to click UnMute on the page! 🔊):
 - I have several modes you can select from:
   - [arbysconvention](public/configs/arbysconvention.json)
   - [calm](public/configs/calm.json)
+  - [christmas](public/configs/christmas.json)
   - [crazytoasters](public/configs/crazytoasters.json)
   - [default](public/configs/default.json)
   - [mayhem](public/configs/mayhem.json)

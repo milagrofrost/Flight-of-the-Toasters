@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
@@ -25,6 +25,9 @@ let config = {
   copSoundChance: 5,         // Chance of a cop triggering a sound (1 in 'copSoundChance' chance)
   totalPoliceSounds: 14,     // Number of police sounds available (police-1.wav to police-14.wav)
   excludeNamespaces: ['argocd'], // Namespaces to exclude from display
+  christmasMode: false,      // Enable Christmas mode
+  christmasToasters: [],     // List of Christmas toaster images
+  santaFreq: 0.1,            // Frequency of Santa appearing
 };
 
 // Function to load configuration from a specified config.json file based on the query parameter
@@ -71,12 +74,19 @@ const imagesToLoad = [
 // Preload images to prevent flickering, with a callback once all images are loaded
 function preloadImages(onLoadCallback) {
   let loadedCount = 0;
-  imagesToLoad.forEach(({ name, type }) => {
+  const allImagesToLoad = [...imagesToLoad];
+  if (config.christmasMode) {
+    config.christmasToasters.forEach(name => {
+      allImagesToLoad.push({ name, type: 'gif', path: `xmas/${name}.gif` });
+    });
+    allImagesToLoad.push({ name: 'santa', type: 'gif', path: 'xmas/santa.gif' });
+  }
+  allImagesToLoad.forEach(({ name, type, path }) => {
     const img = new Image();
-    img.src = `${process.env.PUBLIC_URL}/${name}.${type}`; // Set the source for the image
+    img.src = `${process.env.PUBLIC_URL}/${path || `${name}.${type}`}`; // Set the source for the image
     img.onload = () => {
       loadedCount++;
-      if (loadedCount === imagesToLoad.length) {
+      if (loadedCount === allImagesToLoad.length) {
         onLoadCallback(); // All images loaded, trigger the callback
       }
     };
@@ -96,6 +106,18 @@ function playRandomPoliceSound() {
 
 // Function to fetch data from the remote URL, with a fallback to local data if it fails
 async function fetchData() {
+  if (!config.remoteDataUrl) {
+    // Directly use local data if no remote URL
+    try {
+      const localResponse = await fetch(`${process.env.PUBLIC_URL}/local-fallback.json`);
+      if (!localResponse.ok) throw new Error('Local file response was not ok');
+      const localData = await localResponse.json();
+      return { data: localData, source: 'local' };
+    } catch (localError) {
+      console.error('Error fetching local data:', localError);
+      return { data: { pods: [], nodes: [], timestamp: null }, source: 'none' };
+    }
+  }
   try {
     const response = await fetch(config.remoteDataUrl); // Try fetching from the remote URL
     if (!response.ok) throw new Error('Network response was not ok');
@@ -209,7 +231,7 @@ const FlyingItem = React.memo(({ data, type, size, initialDuration, delay, isMut
           setButterSlices(0); // No butter for cops
         } else {
           setIsCop(false);
-          const butterChance = Math.random() < 1 / config.butterChance; // Determine if the item gets butter
+          const butterChance = config.butterChance > 0 && Math.random() < 1 / config.butterChance; // Determine if the item gets butter
           if (butterChance && type === 'toast') {
             setHasButter(true);
             if (zoomieChance) {
@@ -253,7 +275,14 @@ const FlyingItem = React.memo(({ data, type, size, initialDuration, delay, isMut
   }, [hasButter, butterAdjusted]);
 
   // Determine the image type based on CPU usage and type (toast or toaster)
-  const imgType = (() => {
+  const imgType = useMemo(() => {
+    if (config.christmasMode) {
+      if (Math.random() < config.santaFreq) {
+        return 'santa';
+      } else {
+        return config.christmasToasters[Math.floor(Math.random() * config.christmasToasters.length)];
+      }
+    }
     if (data.cpuUsage === '4040404') {
       return type === 'toast' ? 'missing-toast' : 'missing-toaster'; // Special case for missing data
     }
@@ -263,7 +292,7 @@ const FlyingItem = React.memo(({ data, type, size, initialDuration, delay, isMut
     if (usageRatio < 0.5) return `${type}2`;
     if (usageRatio < 0.75) return `${type}3`;
     return `${type}4`; // Determine which image to use based on usage ratio
-  })();
+  }, [data.cpuUsage, type]); // Memoize with dependencies
 
   if (!readyToAnimate || position === null) {
     return null; // Do not render if not ready or position is not set
@@ -334,7 +363,7 @@ const FlyingItem = React.memo(({ data, type, size, initialDuration, delay, isMut
       <img 
         src={imageCache[imgType].src} 
         alt={imgType} 
-        style={{ width: `${size}px` }} // Render the main image
+        style={{ width: `${imgType === 'santa' ? size * 1.2 : size}px` }} // Render the main image
       />
 
       {hasButter && Array(butterSlices).fill(null).map((_, i) => (
@@ -426,6 +455,24 @@ function App() {
         <button onClick={unmuteAudio} className="unmute-button">
           Unmute 
         </button>
+      )}
+
+      {config.christmasMode && (
+        <div className="snow">
+          {Array.from({ length: 50 }, (_, i) => (
+            <div
+              key={i}
+              className="snowflake"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDuration: `${Math.random() * 10 + 10}s`,
+                animationDelay: `${Math.random() * 10}s`,
+              }}
+            >
+              ❄
+            </div>
+          ))}
+        </div>
       )}
 
       {dataQueue.pods.map((pod, index) => {
