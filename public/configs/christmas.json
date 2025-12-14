@@ -21,6 +21,6 @@
     "totalPoliceSounds": 14,
     "excludeNamespaces": ["argocd"],
     "christmasMode": true,
-    "christmasToasters": ["cane", "ginger", "orn1", "orn2", "orn3", "pres1", "pres2", "pres3", "pres4", "pres5", "pres6", "pres7", "pres8", "pres9", "presx", "stocking", "tree"],
+    "christmasToasters": ["cane", "ginger", "orn1", "orn2", "orn3", "pres1", "pres2", "pres3", "presx", "stocking", "tree"],
     "santaFreq": 0.1
 }
