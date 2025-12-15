@@ -1,6 +1,6 @@
 {
     "showLabels": false,
-    "showStatus": true,
+    "showStatus": false,
     "remoteDataUrl": "",
     "updateInterval": 60000,
     "staggerInterval": 500,
