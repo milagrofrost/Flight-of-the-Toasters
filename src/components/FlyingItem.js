@@ -153,7 +153,7 @@ const FlyingItem = React.memo(({ data, type, size, initialDuration, delay, isMut
   }, [hasButter, butterAdjusted]);
 
   // Determine the image type based on CPU usage and type (toast or toaster)
-  const imgType = useMemo(() => chooseImageType(data, type), [data.cpuUsage, type, chooseImageType]);
+  const imgType = useMemo(() => chooseImageType(data, type), [data, type, chooseImageType]);
 
   if (!readyToAnimate || position === null) {
     return null; // Do not render if not ready or position is not set

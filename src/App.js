@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import FlyingItem, { setGlobals as setFlyingItemGlobals } from './components/FlyingItem';
 import * as NormalMode from './modes/NormalMode';
